@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+indent() {
+  sed -u 's/^/       /'
+}
+
+BUILD_DIR="$1"
+SOURCE_DIR="$BUILD_DIR/vendor/wordnet/dict"
+TARGET_DIR="$BUILD_DIR/usr/local/WordNet-3.0/dict"
+
+echo "-----> Copying files to $TARGET_DIR"
+
+mkdir -p "$TARGET_DIR"
+
+cp "$SOURCE_DIR/*" "$TARGET_DIR"
+
