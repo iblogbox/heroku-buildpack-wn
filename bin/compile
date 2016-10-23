@@ -5,7 +5,7 @@ indent() {
 }
 
 BUILD_DIR="$1"
-SOURCE_DIR="$BUILD_DIR/vendor/wordnet/dict"
+SOURCE_DIR="$(dirname $0)/../compiled"
 TARGET_DIR="$BUILD_DIR/usr/local/WordNet-3.0/dict"
 
 echo "-----> Copying files to $TARGET_DIR"
