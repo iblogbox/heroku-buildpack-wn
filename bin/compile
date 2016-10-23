@@ -10,6 +10,5 @@ TARGET_DIR="/usr/local/WordNet-3.0"
 
 echo "-----> Copying files to $TARGET_DIR"
 
-mkdir -p "$TARGET_DIR"
-
-cp -r "$SOURCE_DIR" "$TARGET_DIR"
+sudo mkdir -p "$TARGET_DIR"
+sudo cp -r "$SOURCE_DIR" "$TARGET_DIR"
