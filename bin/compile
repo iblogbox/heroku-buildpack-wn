@@ -5,12 +5,11 @@ indent() {
 }
 
 BUILD_DIR="$1"
-SOURCE_DIR="$(dirname $0)/../compiled"
-TARGET_DIR="$BUILD_DIR/usr/local/WordNet-3.0/dict"
+SOURCE_DIR="$(dirname $0)/../compiled/dict"
+TARGET_DIR="$BUILD_DIR/usr/local/WordNet-3.0"
 
 echo "-----> Copying files to $TARGET_DIR"
 
 mkdir -p "$TARGET_DIR"
 
-cp "$SOURCE_DIR/*" "$TARGET_DIR"
-
+cp -r "$SOURCE_DIR" "$TARGET_DIR"
